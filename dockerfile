@@ -32,13 +32,6 @@ RUN docker-php-ext-install gd
 RUN global require hirak/prestissimo
 RUN install --no-dev --working-dir=/var/www/html
 
-
-RUN php artisan config:cache
-
-RUN php artisan route:cache
-
-RUN php artisan migrate --force
-
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
