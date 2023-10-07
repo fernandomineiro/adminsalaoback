@@ -1,4 +1,4 @@
-FROM php:7.0
+FROM php:5.6
 
 # Copy composer.lock and composer.json
 COPY composer.lock composer.json /var/www/
@@ -30,5 +30,5 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 WORKDIR /app
 COPY . .
 # Add user for laravel application
-CMD bash -c "composer install && php artisan serve --host=0.0.0.0 --port=10000
+CMD composer install && php artisan serve --host=0.0.0.0 --port=10000
 EXPOSE 10000
