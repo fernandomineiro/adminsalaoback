@@ -9,7 +9,6 @@ WORKDIR /var/www
 RUN apt-get clean
 
 # Install dependencies
-RUN apt-get update && apt-get install -y 
 
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
