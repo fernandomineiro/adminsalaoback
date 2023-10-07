@@ -14,9 +14,9 @@ RUN apt-get clean
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Install extensions
-RUN docker-php-ext-install pdo_mysql mbstring zip exif pcntl
-RUN docker-php-ext-configure gd --with-gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ --with-png-dir=/usr/include/
-RUN docker-php-ext-install gd
+# RUN docker-php-ext-install pdo_mysql mbstring zip exif pcntl
+# RUN docker-php-ext-configure gd --with-gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ --with-png-dir=/usr/include/
+# RUN docker-php-ext-install gd
 
 #!/usr/bin/env bash
 # RUN global require hirak/prestissimo
