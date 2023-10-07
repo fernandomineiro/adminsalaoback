@@ -29,7 +29,8 @@ RUN docker-php-ext-configure gd --with-gd --with-freetype-dir=/usr/include/ --wi
 RUN docker-php-ext-install gd
 
 #!/usr/bin/env bash
-RUN install --no-dev --working-dir=/var/www/html
+# RUN global require hirak/prestissimo
+# RUN install --no-dev --working-dir=/var/www/html
 
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
