@@ -1,4 +1,4 @@
-FROM php:7.0
+FROM php:5.6
 
 # Copy composer.lock and composer.json
 COPY composer.lock composer.json /var/www/
